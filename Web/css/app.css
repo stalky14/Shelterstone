@@ -1,0 +1,41 @@
+.splash {
+    height:100vh;
+    background: url("../img/splash1.jpg") no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+
+    color: #ffffff;
+
+    text-align: center;
+}
+
+.splash-heading {
+
+    margin-top: 60vh;
+    font-size: 100px;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+
+    .splashnav {
+
+        background-color: transparent;
+        border: none;
+        padding-top: 20px;
+
+        -webkit-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+.splashnav-collapse {
+    color: #ffffff!important;
+
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.splashnav-collapse a {
+    color: #ffffff!important;
+}

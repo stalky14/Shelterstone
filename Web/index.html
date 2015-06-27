@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGU Shelterstone | Climbing & Mountaineering</title>
+
+    <!-- CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <!-- JavaScript -->
+    <script src="js/bootstrap.js"></script>
+</head>
+<body>
+<div class="splash">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top splashnav splashnav-collapse" id="splashnav">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#menu-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#"> <h4>NICK LOGO HERE</h4></a>
+            </div>
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="menu-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#committee">Committee</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="splash-heading">Shelterstone</h1>
+    </div>
+
+
+</div>
+
+<div class="container">
+    <a name="about"></a>
+
+    <h1>About</h1>
+    <ul>
+        <li>Stuff about what we do</li>
+        <li>When we climb</li>
+        <li>What membership gets you</li>
+        <li>benefits</li>
+    </ul>
+</div>
+<div class="container">
+    <a name="committee"></a>
+
+    <h1>The Committee</h1>
+    <ul>
+        <li>Committee people</li>
+        <li>Their roles etc</li>
+        <li>How to contact them</li>
+    </ul>
+</div>
+<div class="container">
+    <a name="contact"></a>
+    <h1>Contact</h1>
+    <ul>
+        <li>Facebook Links</li>
+        <li>Email / form</li>
+    </ul>
+</div>
+
+<script>
+
+    $(document).scroll(function () {
+
+        if ($(this).scrollTop() === 0) {
+            console.log("top");
+            $('#splashnav').addClass("splashnav");
+        } else {
+            console.log($(this).scrollTop());
+            $('#splashnav').removeClass("splashnav");
+        }
+    });
+
+    $(document).ready(function () {
+
+
+    });
+
+    $(function () {
+        $('a[href*=#]:not([href=#])').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top - 35 // -35 to offset the sticky nav
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+
+</script>
+</body>
+</html>
